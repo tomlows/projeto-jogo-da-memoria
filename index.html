@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jogo da Memória</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Jogo da Memória</h1>
+        </header>
+
+        <!-- MODAL DE DIFICULDADE -->
+        <div id="modalOptions" class="modalOptions">
+            <div class="modalContent">
+                <p>JOGO DA MEMORIA</p>
+                <p>Escolha a dificuldade...</p>
+                <div class="box" id="easy">
+                    <p>Fácil</p>
+                    <i class="far fa-smile"></i>
+                </div>
+                <div class="box"  id="normal">
+                    <p>Normal</p>
+                    <i class="far fa-meh"></i>
+                </div>
+                <div class="box" id="hard">
+                    <p>Difícil</p>
+                    <i class="far fa-frown"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL DE VITORIA -->
+        <div id="modalWinner" class="modalOptions animated">
+            <div class="modalContent">
+                <i style="color: #ffc107;" class="fa fa-trophy"></i>
+                <h3>Parábens, Você Venceu !</h3>
+                <div class="score"></div>
+                <span class="close restart">Jogar Novamente</span>
+            </div>
+        </div>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i id="first-star" class="fa fa-star"></i></li>
+        		<li><i id="second-star" class="fa fa-star"></i></li>
+        		<li><i id="third-star" class="fa fa-star"></i></li>
+        	</ul>
+            <br><br>
+            <span class="move">0</span> Movimento(s) | Combinações:  <span id="match">0</span> | Tempo: <span id="minutes">00</span>:<span id="seconds">00</span>
+
+            <div class="restart">
+        		<i class="fa fa-redo-alt"></i>
+        	</div>
+        </section>
+
+        <ul class="deck"></ul>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
